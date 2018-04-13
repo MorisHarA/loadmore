@@ -1,0 +1,61 @@
+{
+  "name": "react-loadmore",
+  "version": "0.1.0",
+  "description": "react loadmore component",
+  "main": "lib/index",
+  "repository": "https://github.com/MorisHarA/loadmore.git",
+  "authors": "MorisHarA",
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run build:commonjs & npm run build:umd & npm run build:umd:min",
+    "build:commonjs": "mkdir -p lib && babel ./src -d lib",
+    "build:umd": "webpack dist/ReactLoadMore.js",
+    "build:umd:min": "NODE_ENV=production webpack dist/ReactLoadMore.min.js",
+    "lint": "eslint src --fix"
+  },
+  "tags": [
+    "react",
+    "loadmore"
+  ],
+  "keywords": [
+    "react",
+    "loadmore"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-import": "^1.7.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "cross-env": "^5.1.4",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-umi": "^0.1.1",
+    "eslint-plugin-compat": "^2.2.0",
+    "eslint-plugin-flowtype": "^2.34.1",
+    "eslint-plugin-html": "^4.0.2",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.1.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "lodash": "^4.17.5",
+    "lodash-decorators": "^5.0.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "webpack": "^3.0.1"
+  }
+}

@@ -1,0 +1,15 @@
+.loading {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 28px;
+  color: #999;
+}
+
+.gif {
+  width: 36px;
+  height: 36px;
+  display: block;
+  margin: 0 auto;
+}
+
