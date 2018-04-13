@@ -7,7 +7,10 @@ A loadmore component for react.
 `npm install react-loadmore-component --save`
 
 ```xml
+import LoadMore from 'react-loadmore-component';
+
 <LoadMore
+  distance={distance}
   loading={loading}
   completed={completed}
   onLoadMore={this.handleLoadMore}
@@ -20,9 +23,10 @@ A loadmore component for react.
 
 PropTypes
 
-- **loading**: `PropTypes.bool`
-- **completed**: `PropTypes.bool`
+- **distance**: `PropTypes.number`
+- **loading**: `PropTypes.bool.isRequired`
+- **completed**: `PropTypes.bool.isRequired`
 - **onLoadMore**: `PropTypes.func.isRequired`
 
 
-## Thanks
+## Thanks.
