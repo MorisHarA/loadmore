@@ -1,10 +1,10 @@
-# react-loadmore
+# react-loadmore-component
 
 A loadmore component for react.
 
 ## Usage
 
-`npm install react-loadmore --save`
+`npm install react-loadmore-component --save`
 
 ```xml
 <LoadMore
