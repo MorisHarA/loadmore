@@ -1,15 +1,16 @@
 {
   "name": "react-loadmore-component",
-  "version": "0.2.4",
+  "version": "0.2.6",
   "description": "react loadmore component",
   "main": "lib/index",
   "repository": "https://github.com/MorisHarA/loadmore.git",
   "authors": "MorisHarA",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf lib && npm run build:commonjs",
-    "build:commonjs": "mkdir -p lib/assets && babel src -d lib && cp -a src/assets/. lib/assets",
-    "publish": "rm -rf lib && npm run build:commonjs && npm publish .",
+    "build": "rm -rf lib && npm run build:commonjs && npm run build:es",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs && mkdir -p lib/assets && babel src -d lib && cp -a src/assets/. lib/assets",
+    "build:es": "cross-env BABEL_ENV=es && mkdir -p es/assets && babel src -d es && cp -a src/assets/. es/assets",
+    "release": "rm -rf lib es && npm run build && npm publish .",
     "lint": "eslint src --fix"
   },
   "tags": [
@@ -33,6 +34,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "cross-env": "^5.1.4",
     "eslint": "^4.14.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-standard": "^11.0.0",
