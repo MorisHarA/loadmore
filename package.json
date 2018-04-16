@@ -1,6 +1,6 @@
 {
   "name": "react-loadmore-component",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "react loadmore component",
   "main": "lib/index",
   "repository": "https://github.com/MorisHarA/loadmore.git",
@@ -32,8 +32,6 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
-    "cross-env": "^5.1.4",
-    "css-loader": "^0.28.11",
     "eslint": "^4.14.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-standard": "^11.0.0",
@@ -51,9 +49,6 @@
     "lodash-decorators": "^5.0.0",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "style-loader": "^0.20.3",
-    "url-loader": "^1.0.1",
-    "webpack": "^3.0.1"
+    "react-dom": "^16.2.0"
   }
 }
