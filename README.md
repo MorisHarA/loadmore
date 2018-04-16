@@ -10,7 +10,6 @@ A loadmore component for react.
 import LoadMore from 'react-loadmore-component';
 
 <LoadMore
-  distance={distance}
   loading={loading}
   completed={completed}
   onLoadMore={this.handleLoadMore}
@@ -19,14 +18,15 @@ import LoadMore from 'react-loadmore-component';
 </LoadMore>
 ```
 
-## All props
+## Props
 
-PropTypes
-
-- **distance**: `PropTypes.number`
-- **loading**: `PropTypes.bool.isRequired`
-- **completed**: `PropTypes.bool.isRequired`
-- **onLoadMore**: `PropTypes.func.isRequired`
+| 属性                    | 说明                       | 类型 | 默认值 
+|:----------------------------|:----------------------------------|:-------------------------|:------
+| loading          | 必选，是否显示加载状态 |bool |false
+| completed      | 必选，是否完成全部加载，`true` 卸载监听器 |bool|false
+| onLoadMore | 必选，触底回调函数 |() => void| -
+| distance | 可选，距离页面底的距离 | number | 100
+| indicator | 可选，指示器配置，自定义加载和结束显示 `{ loading: ReactNode, completed: ReactNode }` | Object | -
 
 
 ## Thanks.
