@@ -2,6 +2,8 @@
 
 A loadmore component for react.
 
+![Demo GIF](https://github.com/MorisHarA/loadmore/blob/master/docs/demo.gif)
+
 ## Usage
 
 `npm install react-loadmore-component --save`
