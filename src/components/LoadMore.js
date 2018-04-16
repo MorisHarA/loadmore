@@ -2,7 +2,7 @@
  * @Author: luandapeng
  * @Date: 2018-04-04 12:31:56
  * @Last Modified by: luandapeng
- * @Last Modified time: 2018-04-16 13:12:21
+ * @Last Modified time: 2018-04-16 13:46:29
  */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -19,6 +19,7 @@ export default class LoadMore extends React.Component {
     completed: PropTypes.bool,
     indicator: PropTypes.object,
   }
+
   static defaultProps = {
     distance: 100,
     loading: false,
