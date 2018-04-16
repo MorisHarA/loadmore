@@ -1,16 +1,14 @@
 {
   "name": "react-loadmore-component",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "react loadmore component",
   "main": "lib/index",
   "repository": "https://github.com/MorisHarA/loadmore.git",
   "authors": "MorisHarA",
   "license": "MIT",
   "scripts": {
-    "build": "npm run build:commonjs & npm run build:umd & npm run build:umd:min",
-    "build:commonjs": "mkdir -p lib && babel ./src -d lib",
-    "build:umd": "webpack dist/ReactLoadMore.js",
-    "build:umd:min": "NODE_ENV=production webpack dist/ReactLoadMore.min.js",
+    "build": "npm run build:commonjs",
+    "build:commonjs": "mkdir -p lib/assets && babel src -d lib && cp -a src/assets/. lib/assets",
     "lint": "eslint src --fix"
   },
   "tags": [
