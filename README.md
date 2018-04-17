@@ -10,7 +10,7 @@ A loadmore component for react.
 
 `$ npm install react-loadmore-component --save`
 
-```xml
+```jsx
 import LoadMore from 'react-loadmore-component';
 
 <LoadMore
