@@ -9,9 +9,8 @@ A loadmore component for react.
 ## Usage
 
 `$ npm install react-loadmore-component --save`
-`$ yarn add react-loadmore-component`
 
-```xml
+```jsx
 import LoadMore from 'react-loadmore-component';
 
 <LoadMore
