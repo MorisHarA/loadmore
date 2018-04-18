@@ -48,7 +48,6 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-standard": "^3.0.1",
-    "lodash": "^4.17.5",
     "lodash-decorators": "^5.0.0",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
