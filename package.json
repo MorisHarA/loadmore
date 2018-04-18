@@ -1,6 +1,6 @@
 {
   "name": "react-loadmore-component",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "react loadmore component",
   "main": "lib/index",
   "repository": "https://github.com/MorisHarA/loadmore.git",
