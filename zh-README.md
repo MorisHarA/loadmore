@@ -24,14 +24,14 @@ import LoadMore from 'react-loadmore-component';
 
 ## Props
 
-| Property                    | Description                       | Type | Default
+| 属性                    | 说明                       | 类型 | 默认值 
 |:----------------------------|:----------------------------------|:-------------------------|:------
-| loading          | required, display loading component |bool |false
-| completed      | required, display completed component and uninstall the listener |bool|false
-| onLoadMore | required, callback function |() => {}| -
-| distance | distance from the bottom of the page to trigger the callback function | number | 100
-| style | loadmore container style | Object | -
-| indicator | indicator config, custom loading and end display, `{ loading: ReactNode, completed: ReactNode }`, if ReactNode is `null`, display default | Object | -
+| loading          | 必选，是否显示加载状态 |bool |false
+| completed      | 必选，全部加载显示结束并且卸载监听器 |bool|false
+| onLoadMore | 必选，触底回调函数 |() => {}| -
+| distance | 可选，距离页面底触发回调函数的距离 | number | 100
+| style | 可选，用于修改loadmore容器的样式 | Object | -
+| indicator | 可选，指示器配置，自定义加载和结束显示 `{ loading: ReactNode, completed: ReactNode }`, ReactNode为`null`显示默认 | Object | -
 
 
 ## Thanks.
