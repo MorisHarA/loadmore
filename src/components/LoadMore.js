@@ -2,7 +2,7 @@
  * @Author: luandapeng
  * @Date: 2018-04-04 12:31:56
  * @Last Modified by: luandapeng
- * @Last Modified time: 2018-04-18 11:23:20
+ * @Last Modified time: 2018-04-23 13:59:36
  */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -28,6 +28,11 @@ export default class LoadMore extends React.Component {
       loading: null,
       completed: null,
     },
+  }
+
+  constructor(props) {
+    super(props);
+    this.el = React.createRef();
   }
 
   componentDidMount() {
@@ -89,7 +94,7 @@ export default class LoadMore extends React.Component {
     return (
       <React.Fragment>
         { React.Children.only(this.props.children) }
-        <div style={{ ...loadingStyle, ...style }} ref={(el) => { this.el = el; }}>
+        <div style={{ ...loadingStyle, ...style }} ref={this.el}>
           { loading && (indicator.loading ? <Loading /> : <img style={gifStyle} src={gif} alt="loading" />) }
           { !loading && completed && (indicator.completed ? <Completed /> : <span>没有了，到底了！</span>) }
         </div>
