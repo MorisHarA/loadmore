@@ -33,7 +33,7 @@ export const getCurrentDistance = (elm) => {
 };
 
 
-export const Throttle = ms => (fn) => {
+export const throttle = (fn, ms) => {
   let timer = null;
   let now = null;
   return (...args) => {
