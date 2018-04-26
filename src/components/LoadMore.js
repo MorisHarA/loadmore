@@ -2,14 +2,11 @@
  * @Author: luandapeng
  * @Date: 2018-04-04 12:31:56
  * @Last Modified by: luandapeng
- * @Last Modified time: 2018-04-26 11:27:27
+ * @Last Modified time: 2018-04-26 15:12:10
  */
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Bind from 'lodash-decorators/bind';
-import Throttle from 'lodash-decorators/throttle';
-import { getScrollParent, getCurrentDistance } from '../utils/utils';
+import { getScrollParent, getCurrentDistance, throttle } from '../utils/utils';
 import gif from '../assets/loading.gif';
 
 export default class LoadMore extends React.Component {
@@ -31,14 +28,9 @@ export default class LoadMore extends React.Component {
     },
   }
 
-  constructor(props) {
-    super(props);
-    this.el = React.createRef();
-  }
-
   componentDidMount() {
-    const self = this;
-    this.scrollParent = getScrollParent(ReactDOM.findDOMNode(self.el)); // eslint-disable-line
+    this.scrollParent = getScrollParent(this.el);
+    this.scrollHandler = throttle(this.scrollHandlerOriginal, 100);
     this.scrollParent.addEventListener('scroll', this.scrollHandler);
   }
 
@@ -59,9 +51,7 @@ export default class LoadMore extends React.Component {
     return () => target;
   };
 
-  @Bind()
-  @Throttle(100)
-  scrollHandler() {
+  scrollHandlerOriginal = () => {
     const { onLoadMore, distance, loading } = this.props;
     const currentDistance = getCurrentDistance(this.scrollParent);
     if (!loading && currentDistance <= distance) {
@@ -96,7 +86,7 @@ export default class LoadMore extends React.Component {
     return (
       <React.Fragment>
         { React.Children.only(this.props.children) }
-        <div style={{ ...loadingStyle, ...style }} ref={this.el}>
+        <div style={{ ...loadingStyle, ...style }} ref={(el) => { this.el = el; }}>
           { loading && (indicator.loading ? <Loading /> : <img style={gifStyle} src={gif} alt="loading" />) }
           { !loading && completed && (indicator.completed ? <Completed /> : <span>没有了，到底了！</span>) }
         </div>
