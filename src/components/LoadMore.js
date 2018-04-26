@@ -2,9 +2,10 @@
  * @Author: luandapeng
  * @Date: 2018-04-04 12:31:56
  * @Last Modified by: luandapeng
- * @Last Modified time: 2018-04-23 13:59:36
+ * @Last Modified time: 2018-04-26 11:27:27
  */
 import React from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Bind from 'lodash-decorators/bind';
 import Throttle from 'lodash-decorators/throttle';
@@ -36,7 +37,8 @@ export default class LoadMore extends React.Component {
   }
 
   componentDidMount() {
-    this.scrollParent = getScrollParent(this.el);
+    const self = this;
+    this.scrollParent = getScrollParent(ReactDOM.findDOMNode(self.el)); // eslint-disable-line
     this.scrollParent.addEventListener('scroll', this.scrollHandler);
   }
 
