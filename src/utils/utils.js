@@ -31,3 +31,22 @@ export const getCurrentDistance = (elm) => {
   const paddingBottom = parseInt(styles.paddingBottom, 10);
   return scrollHeight - innerHeight - top - paddingTop - paddingBottom;
 };
+
+
+export const Throttle = ms => (fn) => {
+  let timer = null;
+  let now = null;
+  return (...args) => {
+    const diff = ms - (Date.now() - now);
+    if (diff <= 0) {
+      fn(...args);
+      now = Date.now();
+    } else {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        fn(...args);
+        now = Date.now();
+      }, diff);
+    }
+  };
+};

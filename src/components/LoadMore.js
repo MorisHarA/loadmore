@@ -2,14 +2,12 @@
  * @Author: luandapeng
  * @Date: 2018-04-04 12:31:56
  * @Last Modified by: luandapeng
- * @Last Modified time: 2018-04-26 11:27:27
+ * @Last Modified time: 2018-04-26 14:24:40
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Bind from 'lodash-decorators/bind';
-import Throttle from 'lodash-decorators/throttle';
-import { getScrollParent, getCurrentDistance } from '../utils/utils';
+import { getScrollParent, getCurrentDistance, Throttle } from '../utils/utils';
 import gif from '../assets/loading.gif';
 
 export default class LoadMore extends React.Component {
@@ -59,9 +57,8 @@ export default class LoadMore extends React.Component {
     return () => target;
   };
 
-  @Bind()
   @Throttle(100)
-  scrollHandler() {
+  scrollHandler = () => {
     const { onLoadMore, distance, loading } = this.props;
     const currentDistance = getCurrentDistance(this.scrollParent);
     if (!loading && currentDistance <= distance) {
