@@ -6,7 +6,7 @@ A loadmore component for react.
 
 ![Demo GIF](https://github.com/MorisHarA/loadmore/blob/master/docs/demo.gif)
 
-## Usage
+## 使用
 
 `$ npm install react-loadmore-component --save`
 
@@ -22,7 +22,7 @@ import LoadMore from 'react-loadmore-component';
 </LoadMore>
 ```
 
-## Props
+## 属性
 
 | 属性                    | 说明                       | 类型 | 默认值 
 |:----------------------------|:----------------------------------|:-------------------------|:------
@@ -34,4 +34,4 @@ import LoadMore from 'react-loadmore-component';
 | indicator | 可选，指示器配置，自定义加载和结束显示 `{ loading: ReactNode, completed: ReactNode }`, ReactNode为`null`显示默认 | Object | -
 
 
-## Thanks.
+## 谢谢
