@@ -2,7 +2,7 @@
  * @Author: luandapeng
  * @Date: 2018-04-04 12:31:56
  * @Last Modified by: luandapeng
- * @Last Modified time: 2018-04-28 11:27:33
+ * @Last Modified time: 2018-05-02 13:46:08
  */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -36,8 +36,8 @@ export default class LoadMore extends React.Component {
     this.scrollParent.addEventListener('scroll', this.scrollHandler);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.completed) {
+  componentDidUpdate(prevProps) {
+    if (!prevProps.completed && this.props.completed) {
       this.scrollParent.removeEventListener('scroll', this.scrollHandler);
     }
   }
